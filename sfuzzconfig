@@ -1,0 +1,5 @@
+literal=images
+include basic-fuzz-strings.list
+endcfg
+FUZZ
+--
