@@ -1,0 +1,64 @@
+[04:42:29] info: beginning fuzz - method: io, config from: [/home/test/sfuzz/pythonscript/sfuzzconfig], out: [:0]
+[04:42:29] attempting fuzz - 1 (len: 7).
+images
+[04:42:29] attempting fuzz - 2 (len: 4).
+�
+[04:42:29] attempting fuzz - 3 (len: 4).
+�
+[04:42:29] attempting fuzz - 4 (len: 4).
+�
+[04:42:29] attempting fuzz - 5 (len: 3).
+%n
+[04:42:29] attempting fuzz - 6 (len: 10).
+%#123456x
+[04:42:29] attempting fuzz - 7 (len: 3).
+%s
+[04:42:29] attempting fuzz - 8 (len: 4).
+%%s
+[04:42:29] attempting fuzz - 9 (len: 5).
+%20s
+[04:42:29] attempting fuzz - 10 (len: 6).
+%%20s
+[04:42:29] attempting fuzz - 11 (len: 5).
+%20x
+[04:42:29] attempting fuzz - 12 (len: 6).
+%%20x
+[04:42:29] attempting fuzz - 13 (len: 11).
+%n%n%n%n%n
+[04:42:29] attempting fuzz - 14 (len: 11).
+%p%p%p%p%p
+[04:42:29] attempting fuzz - 15 (len: 11).
+%x%x%x%x%x
+[04:42:29] attempting fuzz - 16 (len: 11).
+%d%d%d%d%d
+[04:42:29] attempting fuzz - 17 (len: 11).
+%s%s%s%s%s
+[04:42:29] attempting fuzz - 18 (len: 9).
+%s%p%x%d
+[04:42:29] attempting fuzz - 19 (len: 8).
+%.1024d
+[04:42:29] attempting fuzz - 20 (len: 8).
+%.1025d
+[04:42:29] attempting fuzz - 21 (len: 8).
+%.2048d
+[04:42:29] attempting fuzz - 22 (len: 8).
+%.2049d
+[04:42:29] attempting fuzz - 23 (len: 8).
+%.4096d
+[04:42:29] attempting fuzz - 24 (len: 8).
+%.4097d
+[04:42:29] attempting fuzz - 25 (len: 14).
+%99999999999s
+[04:42:29] attempting fuzz - 26 (len: 5).
+%08x
+[04:42:29] attempting fuzz - 27 (len: 6).
+%%20d
+[04:42:29] attempting fuzz - 28 (len: 6).
+%%20n
+[04:42:29] attempting fuzz - 29 (len: 6).
+%%20x
+[04:42:29] attempting fuzz - 30 (len: 6).
+%%20s
+[04:42:29] attempting fuzz - 31 (len: 65).
+%#0123456x%08x%x%s%p%d%n%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%
+[04:42:29] completed fuzzing.

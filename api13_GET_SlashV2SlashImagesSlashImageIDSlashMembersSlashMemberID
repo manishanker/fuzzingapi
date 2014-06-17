@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Checking GET /v2/images/{image_id}/members/{member_id}"
+curl -i -X GET http://172.16.17.8:9292/v2/images/c37cd623-2d81-44e3-a811-5aafe81dce28/members/c150b4e1d7b84a4a80701e0d4202ae4d -H "X-Auth-Token: $token" -H "Content-Type: application/json" -H "Accept: application/json"
