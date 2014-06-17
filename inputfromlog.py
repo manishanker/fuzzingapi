@@ -4,12 +4,20 @@ openstack services using curl command"""
 import subprocess
 import os
 import json
+<<<<<<< HEAD
 #mydict={}
 #sfuzzconfig = raw_input("Specify the absolute file location of the sfuzz config : ")
 sfuzzconfig = "/home/test/sfuzz/pythonscript/sfuzzconfig"
 print sfuzzconfig
 #function to start sfuzz and create fuzzing payload
 """def start_sfuzz():
+=======
+mydict={}
+sfuzzconfig = raw_input("Specify the absolute file location of the sfuzz config : ")
+print sfuzzconfig
+#function to start sfuzz and create fuzzing payload
+def start_sfuzz(sfuzzconfig):
+>>>>>>> ad9e9af93302de8a775fa80e7511a356205c0991
 	print "Starting sfuzz to create fuzz payload"
 	subprocess.call(["sfuzz", "-O", "-f", sfuzzconfig, "-v", "-l", "-r", "-L", "Log"])
 	print "Succesfully generated fuzz payload in log file"
@@ -22,6 +30,7 @@ def scan_logfile():
 			mydict[i]=line[:-1]
 			i+=1
 	print mydict		
+<<<<<<< HEAD
 """		
 #Function to get token from keystone and store it in output.txt
 def get_token():
@@ -29,6 +38,14 @@ def get_token():
 		#password = raw_input("Enter authentication password for getting keystone token : ")
 		password="password"
 		subprocess.call(['./tokengen.sh',password])
+=======
+		
+#Function to get token from keystone and store it in output.txt
+def get_token():
+		print "Getting token from keystone"
+		password = raw_input("Enter authentication password for getting keystone token : ")
+		subprocess.call(['./sheel.sh',password])
+>>>>>>> ad9e9af93302de8a775fa80e7511a356205c0991
 #Function to parse the json output in output.txt to get the token and export it in environmental variable token
 def parse_json():
 	file_object = open('jsonoutput.txt','r')
@@ -36,6 +53,7 @@ def parse_json():
 	for line in file_object:
 	        data += line
 	jsondata = json.loads(data)
+<<<<<<< HEAD
 	#print json.dumps(data, indent=4)
 	token = jsondata['access']['token']['id']
 	print token
@@ -63,3 +81,16 @@ def parse_json():
 get_token()
 parse_json()
 
+=======
+	print json.dumps(data, indent=4)
+	token = jsondata['access']['token']['id']
+	print token
+	for key, value in mydict.iteritems():
+                print "Fuzz test : ", key
+                subprocess.call(['./api.sh',value,token])
+        print "Succesfully finished fuzzing"
+start_sfuzz(sfuzzconfig)
+scan_logfile()
+get_token()
+parse_json()
+>>>>>>> ad9e9af93302de8a775fa80e7511a356205c0991

@@ -1,5 +1,6 @@
 #!/bin/bash
 #shell script to Fuzz Openstack API
+<<<<<<< HEAD
 #export token=$2
 # All the Glance API calls
 echo "Checking First GET request"
@@ -94,3 +95,6 @@ sleep 10
 echo
 echo "Goodbye! "
 
+=======
+curl -i -X GET http://127.0.0.1:9292/v2/$1 -H "X-Auth-Token : $2"
+>>>>>>> ad9e9af93302de8a775fa80e7511a356205c0991
